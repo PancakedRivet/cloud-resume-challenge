@@ -1,0 +1,26 @@
+#content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h1, h2  {
+    text-align: center;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(0, 119, 255); 
+  font-weight: bold; 
+  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  width: 1em; /* Also needed for space */
+  margin-left: -1em; /* Also needed for space */
+}
+
+ul#links {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
