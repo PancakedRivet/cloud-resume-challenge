@@ -4,7 +4,7 @@ on:
         paths: 
             - './frontend/*.bicep'
             
-name: Azure ARM
+name: Deploy Frontend Infra
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
