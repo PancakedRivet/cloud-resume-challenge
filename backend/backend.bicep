@@ -240,3 +240,41 @@ resource FailureAnomaliescloudresumeapipdevene 'microsoft.alertsManagement/smart
   location: 'global'
   tags: {}
 }
+
+@description('Definition for App Insights')
+resource cloudresumeapiappinsights 'Microsoft.Insights/components@2020-02-02' = {
+  name: 'cloudresumeapipdevene'
+  location: location
+  tags: {}
+  kind: 'web'
+  properties: {
+    Application_Type: 'web'
+    RetentionInDays: 90
+    WorkspaceResourceId: workspacecloudresumeapipdevene.id
+    IngestionMode: 'LogAnalytics'
+    publicNetworkAccessForIngestion: 'Enabled'
+    publicNetworkAccessForQuery: 'Enabled'
+  }
+}
+
+@description('Definition for Log Analytics Workspace')
+resource workspacecloudresumeapipdevene 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
+  properties: {
+    sku: {
+      name: 'pergb2018'
+    }
+    retentionInDays: 30
+    features: {
+      legacy: 0
+      searchVersion: 1
+      enableLogAccessUsingOnlyResourcePermissions: true
+    }
+    workspaceCapping: {
+      dailyQuotaGb: json('-1.0')
+    }
+    publicNetworkAccessForIngestion: 'Enabled'
+    publicNetworkAccessForQuery: 'Enabled'
+  }
+  location: location
+  name: 'workspace-cloudresumeapipdevene'
+}
