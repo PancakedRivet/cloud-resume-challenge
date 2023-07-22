@@ -6,7 +6,7 @@ This requires touching multiple parts of the Azure cloud infrastructure, increas
 
 ## Result
 
-The result of this challenge can be seen by browsing to <https:www.patrickdevane.co>
+The result of this challenge can be seen by browsing to <https://www.patrickdevane.co>
 
 ## Technologies
 
