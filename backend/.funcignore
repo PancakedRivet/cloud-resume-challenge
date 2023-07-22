@@ -1,1 +1,4 @@
+# Things that are ignored when the Azure Function is deployed
 .venv
+.python-version
+.env
