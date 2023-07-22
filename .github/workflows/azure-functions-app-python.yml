@@ -22,7 +22,7 @@ on:
   push:
     branches: ["main"]
     paths: 
-      - './backend/*.bicep'
+      - './backend'
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'cloud-resume-api-pdevene'   # set this to your function app name on Azure
