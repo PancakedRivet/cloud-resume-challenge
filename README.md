@@ -16,6 +16,7 @@ This challenge uses the following parts:
 
 - Azure Storage - to host the static website files
 - Azure FrontDoor and CDN - to map the static file host to a custom domain and provide caching for faster delivery
+- Azure Endpoint - to enforce HTTPS on the custom domain
 
 ### The Backend
 
