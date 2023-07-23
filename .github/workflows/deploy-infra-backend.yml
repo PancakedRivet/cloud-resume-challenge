@@ -2,7 +2,7 @@ on:
     push:
         branches: [ main ]
         paths: 
-            - './backend/*.bicep'
+            - 'backend/**.bicep'
             
 name: Deploy Backend Infra
 jobs:
