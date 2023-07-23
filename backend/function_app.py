@@ -5,7 +5,7 @@ from table_helper import TableServiceHelper
 
 app = func.FunctionApp()
 
-@app.route(route="ping")
+@app.route(route="ping", auth_level=func.AuthLevel.ANONYMOUS)
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Ping recieved')
 
