@@ -20,7 +20,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             
     if name: 
         return func.HttpResponse( 
-            f"Hello, {name}. Pong!",
+            f"Hello, {name}! Pong!",
             status_code=200
         )
         
